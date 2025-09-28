@@ -5,7 +5,6 @@ class NewsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const nome = 'Fravo';
     final manchetes = const [
       'Manchete Fiticsia 1',
       'Machete Ficticia 2',

@@ -3,16 +3,8 @@ import 'package:flutter/material.dart';
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
-  String _saudacao() {
-    final h = DateTime.now().hour;
-    if (h < 12) return 'Bom dia';
-    if (h < 18) return 'Boa tarde';
-    return 'Boa noite';
-  }
-
   @override
   Widget build(BuildContext context) {
-    const nome = 'Fravo';
 
     return Scaffold(
       appBar: AppBar(title: const Text('Boas-vindas')),
