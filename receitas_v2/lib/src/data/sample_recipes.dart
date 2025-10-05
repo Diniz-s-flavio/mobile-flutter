@@ -3,114 +3,135 @@ import '../models/recipe.dart';
 class SampleRecipes {
   static const doces = <Recipe>[
     Recipe(
-      title: 'Brigadeiro',
-      shortDescription: 'Docinho de chocolate cremoso.',
+      title: 'Cocada Baiana',
+      shortDescription: 'Clássica de coco, macia por dentro.',
       ingredients: [
-        '1 lata de leite condensado',
-        '2 colheres (sopa) de chocolate em pó',
-        '1 colher (sopa) de manteiga',
-        'Granulado para enrolar'
+        '2 xíc. de coco fresco ralado',
+        '1 e 1/2 xíc. de açúcar',
+        '1/2 xíc. de água',
+        '1 pitada de sal',
+        '1 col. (sopa) de manteiga',
       ],
       methodOfPreparation:
-        'Leve ao fogo baixo o leite condensado, chocolate e manteiga, mexendo até desgrudar do fundo. Deixe esfriar, enrole e passe no granulado.',
+          'Leve ao fogo a água, açúcar e sal até formar calda em ponto de fio. '
+          'Junte o coco e a manteiga, mexendo até desgrudar do fundo. '
+          'Coloque porções em superfície untada e deixe firmar.',
     ),
     Recipe(
-      title: 'Bolo de Cenoura',
-      shortDescription: 'Com cobertura de chocolate.',
+      title: 'Bolinho de Estudante',
+      shortDescription: 'Tapioca com coco, frito e polvilhado com canela.',
       ingredients: [
-        '3 cenouras médias',
-        '3 ovos',
-        '1/2 xíc. de óleo',
-        '2 xíc. de açúcar',
-        '2 xíc. de farinha',
-        '1 col. (sopa) fermento'
+        '2 xíc. de tapioca granulada',
+        '1 xíc. de leite de coco',
+        '1/2 xíc. de açúcar',
+        '1 xíc. de coco ralado',
+        'Uma pitada de sal',
+        'Óleo para fritar',
+        'Açúcar e canela para polvilhar',
       ],
       methodOfPreparation:
-        'Bata cenoura, ovos e óleo. Misture açúcar e farinha, finalize com fermento. Asse a 180°C. Cubra com calda de chocolate.',
+          'Hidrate a tapioca no leite de coco por 20 min. '
+          'Misture açúcar, coco e sal. Modele bolinhos alongados. '
+          'Frite em óleo quente até dourar e passe em açúcar com canela.',
     ),
     Recipe(
-      title: 'Mousse de Maracujá',
-      shortDescription: 'Rápida e aerada.',
+      title: 'Quindim',
+      shortDescription: 'Gema e coco, brilho intenso.',
       ingredients: [
-        '1 lata de leite condensado',
-        '1 lata de creme de leite',
-        '1 medida da lata de suco de maracujá concentrado'
+        '10 gemas',
+        '1 xíc. de açúcar',
+        '1 xíc. de coco ralado fino',
+        '2 col. (sopa) de manteiga derretida',
+        'Manteiga e açúcar para untar as forminhas',
       ],
       methodOfPreparation:
-        'Bata tudo no liquidificador e leve à geladeira por 3 horas.',
+          'Peneire as gemas (sem raspar). Misture com açúcar, coco e manteiga. '
+          'Descanse 10 min. Despeje em formas untadas e açucaradas. '
+          'Asse em banho-maria a 180°C até firmar e dourar.',
     ),
   ];
-
 
   static const salgadas = <Recipe>[
     Recipe(
-      title: 'Lasanha de Carne',
-      shortDescription: 'Camadas suculentas ao molho.',
+      title: 'Empadão Goiano',
+      shortDescription: 'Recheio farto com frango, linguiça e guariroba.',
       ingredients: [
-        'Massa para lasanha',
-        '500g carne moída',
-        'Molho de tomate',
-        'Queijo muçarela',
-        'Presunto',
-        'Temperos a gosto'
+        'Massa podre (farinha, manteiga, ovos, sal)',
+        '500g de frango cozido e desfiado',
+        '200g de linguiça calabresa em cubos',
+        '200g de queijo minas padrão em cubos',
+        '1 xíc. de milho verde',
+        'Guariroba em lâminas (ou palmito, se não encontrar)',
+        'Azeitonas, cheiro-verde, alho, cebola, sal e pimenta',
+        '1 gema para pincelar',
       ],
       methodOfPreparation:
-        'Refogue o alho-poró. Misture ovos, creme e queijo. Despeje sobre a massa pré-assada e leve ao forno.',
+          'Refogue cebola, alho, linguiça e frango; junte milho, guariroba, azeitonas e acerte o sal. '
+          'Forre a forma com a massa, coloque o recheio e o queijo, cubra com massa. '
+          'Pincele gema e asse a 200°C até dourar.',
     ),
     Recipe(
-      title: 'Frango Grelhado com Ervas',
-      shortDescription: 'Suculento e prático para o dia a dia.',
+      title: 'Arroz com Pequi',
+      shortDescription: 'Símbolo do Cerrado, aroma marcante.',
       ingredients: [
-        'Peito de frango',
-        'Alho',
-        'Limão',
-        'Ervas (alecrim, tomilho)',
-        'Azeite, sal e pimenta'
+        '2 xíc. de arroz lavado e escorrido',
+        '6 a 8 caroços de pequi lavado',
+        '2 col. (sopa) de óleo ou banha',
+        '1/2 cebola picada',
+        '2 dentes de alho picados',
+        'Sal a gosto',
+        'Água quente (aprox. 4 xíc.)',
+        'Cheiro-verde para finalizar',
       ],
       methodOfPreparation:
-        'Tempere e grelhe em frigideira quente até dourar e cozinhar por completo.',
+          'Refogue cebola e alho no óleo; junte o pequi e refogue alguns minutos. '
+          'Acrescente o arroz e frite levemente. '
+          'Cubra com água quente, ajuste o sal e cozinhe até secar. '
+          'Finalize com cheiro-verde. (Evite roer o caroço de pequi.)',
     ),
   ];
 
-
   static const bebidas = <Recipe>[
     Recipe(
-      title: 'Limonada Suiça',
-      shortDescription: 'Refrescante e cítrica.',
+      title: 'Caipirinha de Limão',
+      shortDescription: 'O clássico brasileiro com cachaça.',
       ingredients: [
-        '2 limões com casca',
-        '1 litro de água gelada',
-        'Açúcar a gosto',
-        'Gelo'
+        '1 limão tahiti',
+        '2 col. (sopa) de açúcar',
+        '60 ml de cachaça',
+        'Gelo a gosto',
       ],
       methodOfPreparation:
-        'Bata tudo no liquidificador rapidamente e coe. Sirva com gelo.',
+          'Corte o limão em 4–6 pedaços, macere com o açúcar no copo. '
+          'Adicione gelo até o topo e complete com cachaça. Mexa e sirva.',
     ),
     Recipe(
-      title: 'Chocolate Quente Cremoso',
-      shortDescription: 'Perfeito para dias frios.',
+      title: 'Batida de Coco',
+      shortDescription: 'Cremosa e gelada.',
       ingredients: [
-        '500ml leite',
-        '2 col. (sopa) cacau',
-        '2 col. (sopa) açúcar',
-        '1 col. (sopa) amido',
-        'Canela (opcional)'
+        '100 ml de leite de coco',
+        '60 ml de cachaça (ou vodka)',
+        '2 col. (sopa) de leite condensado',
+        'Gelo',
       ],
       methodOfPreparation:
-        'Misture os ingredientes e leve ao fogo baixo até engrossar, mexendo sempre.',
+          'Bata tudo no liquidificador até ficar homogêneo e sirva imediatamente.',
     ),
     Recipe(
-      title: 'Suco Verde',
-      shortDescription: 'Energético e nutritivo.',
+      title: 'Capeta (drink baiano)',
+      shortDescription: 'Festa garantida: guaraná em pó e especiarias.',
       ingredients: [
-        '1 folha de couve',
-        '1 maçã',
-        'Suco de 1 limão',
-        '300ml de água',
-        'Gelo'
+        '50 ml de vodka (ou cachaça)',
+        '1 col. (chá) de guaraná em pó',
+        '2 col. (sopa) de leite condensado',
+        '2 col. (sopa) de creme de leite',
+        '100 ml de leite (opcional, para mais cremosidade)',
+        'Gelo',
+        'Canela em pó para finalizar',
       ],
       methodOfPreparation:
-        'Bata tudo no liquidificador e coe, se desejar.',
+          'Bata todos os ingredientes com gelo no liquidificador até espumar. '
+          'Sirva polvilhando canela por cima.',
     ),
   ];
 }
