@@ -1,3 +1,3 @@
-# receitas_v1
+# receitas_v2
 
 A new Flutter project.

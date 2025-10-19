@@ -1,48 +1,94 @@
 import 'package:flutter/material.dart';
-import '../models/recipe.dart';
+import 'edit_recipe_screen.dart';
 
 class RecipeDetailScreen extends StatelessWidget {
-  static const routeName = '/recipe-detail';
-  final Recipe recipe;
-  const RecipeDetailScreen({super.key, required this.recipe});
+  final String titulo;
+  final String descricao;
+  final String ingredientes;
+  final String preparo;
+  final String imagem;
+
+  const RecipeDetailScreen({
+    super.key,
+    required this.titulo,
+    required this.descricao,
+    required this.ingredientes,
+    required this.preparo,
+    required this.imagem,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(recipe.title, style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.purple,
+        title: Text(titulo),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.edit),
+            onPressed: () async {
+              final receitaEditada = await Navigator.push<Map<String, String>?>(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => EditRecipeScreen(
+                    receita: {
+                      'titulo': titulo,
+                      'descricao': descricao,
+                      'ingredientes': ingredientes,
+                      'preparo': preparo,
+                      'imagem': imagem,
+                    },
+                  ),
+                ),
+              );
+
+              if (receitaEditada != null && context.mounted) {
+                Navigator.pop(context, receitaEditada);
+              }
+            },
+          ),
+        ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              recipe.shortDescription,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(height: 16),
-            Text('Ingredientes', style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: 8),
-            ...recipe.ingredients.map(
-              (i) => Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('• '),
-                  Expanded(child: Text(i)),
-                ],
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: SizedBox(
+              width: double.infinity,
+              height: 220,
+              child: Image.asset(
+                imagem,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) =>
+                    Image.asset('assets/bg.png', fit: BoxFit.cover),
               ),
             ),
-            const SizedBox(height: 16),
-            Text(
-              'Modo de preparo',
-              style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const SizedBox(height: 20),
+          Text(
+            descricao,
+            style: const TextStyle(
+              fontSize: 16,
+              fontStyle: FontStyle.italic,
             ),
-            const SizedBox(height: 8),
-            Text(recipe.methodOfPreparation),
-          ],
-        ),
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            'Ingredientes:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          Text(ingredientes),
+          const SizedBox(height: 20),
+          const Text(
+            'Modo de Preparo:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          Text(preparo),
+        ],
       ),
     );
   }

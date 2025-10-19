@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/recipe.dart';
-import 'screens/home_screen.dart';
-import 'screens/recipe_detail_screen.dart';
-import 'screens/settings_screen.dart';
-import 'screens/about_screen.dart';
+import 'screens/login_screen.dart';
 
 
 class RecipesApp extends StatelessWidget {
@@ -13,33 +9,43 @@ const RecipesApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Receitas Favoritas',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.purple,
+          foregroundColor: Colors.white,
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedItemColor: Colors.purple,
+          unselectedItemColor: Colors.grey,
+          showUnselectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+        ),
       ),
-      home: const HomeScreen(),
-      onGenerateRoute: (settings) {
-        switch (settings.name) {
-          case RecipeDetailScreen.routeName:
-            final recipe = settings.arguments as Recipe;
-            return MaterialPageRoute(
-              builder: (_) => RecipeDetailScreen(recipe: recipe),
-              settings: settings,
-            );
-          case SettingsScreen.routeName:
-            return MaterialPageRoute(
-              builder: (_) => const SettingsScreen(),
-              settings: settings,
-            );
-          case AboutScreen.routeName:
-            return MaterialPageRoute(
-              builder: (_) => const AboutScreen(),
-              settings: settings,
-            );
-        }
-      return null;
-      },
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.purple,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.purple,
+          foregroundColor: Colors.white,
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.purple,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.white,
+          showUnselectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+        ),
+      ),
+      themeMode: ThemeMode.system,
+      home: const LoginScreen(),
     );
   }
 }
